@@ -1,12 +1,12 @@
-# Docker Template
-[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/template)](https://hub.docker.com/r/nicholaswilde/template)
-[![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/template)](https://hub.docker.com/r/nicholaswilde/template)
-[![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-template)](./LICENSE)
-[![ci](https://github.com/nicholaswilde/docker-template/workflows/ci/badge.svg)](https://github.com/nicholaswilde/docker-template/actions?query=workflow%3Aci)
-[![lint](https://github.com/nicholaswilde/docker-template/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-template/actions?query=workflow%3Alint)
+# Docker wiki
+[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/wiki)](https://hub.docker.com/r/nicholaswilde/wiki)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/wiki)](https://hub.docker.com/r/nicholaswilde/wiki)
+[![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-wiki)](./LICENSE)
+[![ci](https://github.com/nicholaswilde/docker-wiki/workflows/ci/badge.svg)](https://github.com/nicholaswilde/docker-wiki/actions?query=workflow%3Aci)
+[![lint](https://github.com/nicholaswilde/docker-wiki/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-wiki/actions?query=workflow%3Alint)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-A multi-architecture image for [template](https://github.com/nicholaswilde/docker-template).
+A multi-architecture image for [prologic's](https://github.com/prologic) [wiki](https://github.com/prologic/wiki).
 
 ## Architectures
 
@@ -19,17 +19,18 @@ A multi-architecture image for [template](https://github.com/nicholaswilde/docke
 * None
 
 ## Usage
+
 ### docker cli
 
 ```bash
 $ docker run -d \
-  --name=template-default \
+  --name=wiki-default \
   -e TZ=America/Los_Angeles `# optional` \
   -e PUID=1000  `# optional` \
   -e PGID=1000   `# optional` \
-  -p 3000:3000 \
+  -p 8000:8000 \
   --restart unless-stopped \
-  nicholaswilde/template
+  nicholaswilde/wiki
 ```
 
 ### docker-compose
