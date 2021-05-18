@@ -1,0 +1,14 @@
+---
+port:
+  tcp6:8000:
+    listening: true
+
+process:
+  wiki:
+    running: true
+
+http:
+  http://localhost:8000/edit/FrontPage:
+    status: 200
+    body:
+      - <title>FrontPage</title>
